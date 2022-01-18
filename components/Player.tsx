@@ -20,6 +20,8 @@ function Player() {
     const [isPlaying, setIsPlaying] = useRecoilState<boolean>(isPlayingState);
     const [volume, setVolume] = useState(50);
     const songInfo = useSongInfo();
+    console.log("Song details>>>> ", songInfo);
+
 
     const fetchCurrentSong = () => {
         if (!songInfo) {
@@ -70,12 +72,12 @@ function Player() {
             {/* left side */}
             <div className="flex items-center space-x-4">
                 <img
-                    src={songInfo?.album.images?.[0]?.url}
+                    src={songInfo?.album.images[0]?.url}
                     alt=""
                     className="hidden md:inline h-10 w-10" />
                 <div className="text-xs md:text-base">
                     <h3>{songInfo?.name}</h3>
-                    <p>{songInfo?.artists?.[0].name}</p>
+                    <p>{songInfo?.artists[0]?.name}</p>
                 </div>
             </div>
             {/* Center */}

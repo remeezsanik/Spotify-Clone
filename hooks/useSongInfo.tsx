@@ -6,11 +6,16 @@ import { Url } from "url";
 
 
 interface IsongInfoShape {
-    album: string;
-    artists: string[];
+    album: any;
+    artists: ArtistsShape[];
+    images: ImagesShape[];
     name: string;
-    images: any[];
+}
+interface ImagesShape {
     url: string;
+}
+interface ArtistsShape {
+    name: string;
 }
 
 function useSongInfo(): IsongInfoShape | null {
