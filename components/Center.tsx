@@ -17,8 +17,14 @@ const colors = [
     'from-purple-500',
 ];
 
+// interface IsessionShape {
+//     user: any;
+//     name: string;
+//     image: string;
+// }
+
 const Center = () => {
-    const { data: session } = useSession<any | null>();
+    const { data: session } = useSession();
     const spotifyApi = useSpotify();
     const [color, setColor] = useState<any>(null);
     const [playlistId] = useRecoilState<string>(playlistIdState);
