@@ -18,7 +18,7 @@ const colors = [
 ];
 
 const Center = () => {
-    const { data: session } = useSession();
+    const { data: session } = useSession<any>();
     const spotifyApi = useSpotify();
     const [color, setColor] = useState<any>(null);
     const [playlistId] = useRecoilState<string>(playlistIdState);
@@ -43,7 +43,7 @@ const Center = () => {
                 <div className="flex items-center relative bg-black space-x-3 opacity-90
                 hover:opacity-80 cursor-pointer rounded-full p-1 pr-2"
                     onClick={() => signOut()}>
-                    <img src={session?.user.image!}
+                    <img src={session?.user.image}
                         alt="userimage"
                         className='rounded-full w-10 h-10'
                     />
