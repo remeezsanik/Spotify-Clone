@@ -20,7 +20,7 @@ const colors = [
 const Center = () => {
     const { data: session } = useSession<any>();
     const spotifyApi = useSpotify();
-    const [color, setColor] = useState<any>(null);
+    const [color, setColor] = useState<any | null>(null);
     const [playlistId] = useRecoilState<string>(playlistIdState);
     const [playlist, setPlaylist] = useRecoilState<any>(playlistState);
 
