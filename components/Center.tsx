@@ -49,11 +49,11 @@ const Center = () => {
                 <div className="flex items-center relative bg-black space-x-3 opacity-90
                 hover:opacity-80 cursor-pointer rounded-full p-1 pr-2"
                     onClick={() => signOut()}>
-                    <img src={session?.user.image}
+                    <img src={session?.user?.image}
                         alt="userimage"
                         className='rounded-full w-10 h-10'
                     />
-                    <h2 className='hidden md:inline text-gray-400 '>{session?.user.name}</h2>
+                    <h2 className='hidden md:inline text-gray-400 '>{session?.user?.name}</h2>
                     <LogoutIcon className='h-7 w-6 text-gray-400 pr-1' />
                 </div>
             </header>
