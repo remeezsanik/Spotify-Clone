@@ -17,11 +17,14 @@ const colors = [
     'from-purple-500',
 ];
 
-// interface IsessionShape {
-//     user: any;
-//     name: string;
-//     image: string;
-// }
+interface IsessionShape {
+    user: IUserShape;
+}
+
+interface IUserShape {
+    image: string;
+    name: string;
+}
 
 const Center = () => {
     const { data: session } = useSession();
